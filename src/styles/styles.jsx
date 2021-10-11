@@ -15,17 +15,14 @@ export const ListDrinksCSS = styled.div`
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      padding-left: 20px;
       span {
         font-size: 0.75em;
-        margin-bottom: 15px;
       }
       img {
         width: auto;
         height: 20%;
       }
       button {
-        margin-top: 15px;
         width: 100%;
       }
     }

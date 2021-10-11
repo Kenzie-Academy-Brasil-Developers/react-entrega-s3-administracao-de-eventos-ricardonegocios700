@@ -1,16 +1,16 @@
 import { DrinksProvider } from "./Drinks/drinks";
 import { DrinksPerEventProvider } from "./DrinksPerEvent/drinksPerEvent";
-import { EventProvider } from "./Events/events";
+import { ListEventsProvider } from "./ListEvents/listEvents";
 import { NewDrinkProvider } from "./NewDrink/newDrink";
 
 export const Providers = ({ children }) => {
   return (
     <DrinksPerEventProvider>
-      <EventProvider>
+      <ListEventsProvider>
         <DrinksProvider>
           <NewDrinkProvider>{children}</NewDrinkProvider>
         </DrinksProvider>
-      </EventProvider>
+      </ListEventsProvider>
     </DrinksPerEventProvider>
   );
 };

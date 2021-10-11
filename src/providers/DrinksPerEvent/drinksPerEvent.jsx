@@ -5,8 +5,7 @@ export const DrinksPerEventContext = createContext([]);
 export const DrinksPerEventProvider = ({ children }) => {
   const [drinksPerEvent, setDrinksPerEvent] = useState([]);
 
-  const addDrinksPerEvent = (drink, event) => {
-    const item = { event: event, ...drink };
+  const addDrinksPerEvent = (item) => {
     setDrinksPerEvent([...drinksPerEvent, item]);
   };
 

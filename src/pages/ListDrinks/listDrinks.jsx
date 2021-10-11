@@ -17,7 +17,7 @@ export const ListDrinks = () => {
       image_url: item.image_url,
       volume: { value: item.volume.value, unit: item.volume.unit },
     });
-    history.push("/events");
+    history.push("/listEvents");
   };
   return (
     <>
@@ -32,7 +32,7 @@ export const ListDrinks = () => {
             <div id="drink-col_right">
               <span>Produto: {item.name}</span>
               <span>Produzida desde: {item.first_brewed}</span>
-              <span>Descrição: {item.description}</span>
+              {/* <span>Descrição: {item.description}</span> */}
               <span>
                 Volume: {item.volume.value} {item.volume.unit}
               </span>

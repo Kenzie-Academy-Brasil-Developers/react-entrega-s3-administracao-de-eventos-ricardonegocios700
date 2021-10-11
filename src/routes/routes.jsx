@@ -1,19 +1,22 @@
 import { Switch, Route } from "react-router-dom";
 import { ListDrinks } from "../pages/ListDrinks/listDrinks";
-import { NewDrinkContext } from "../providers/NewDrink/newDrink";
-import { useContext } from "react";
+import { ListEvents } from "../pages/ListEvents/listEvents";
+import { Event } from "../pages/Event/event";
 
 export const Routes = () => {
-  const { newDrink } = useContext(NewDrinkContext);
-  console.log(newDrink);
   return (
     <Switch>
       <Route exact path="/">
         <ListDrinks />
       </Route>
-      <Route path="/events">
-        <h2>Selecionar o evento</h2>
-        <p>{newDrink.name}</p>
+      <Route path="/listEvents">
+        <ListEvents />
+      </Route>
+      <Route exact path="/event">
+        <h2>Evento</h2>
+      </Route>
+      <Route path="/event/:id">
+        <Event />
       </Route>
     </Switch>
   );
