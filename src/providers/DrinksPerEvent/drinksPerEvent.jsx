@@ -10,10 +10,13 @@ export const DrinksPerEventProvider = ({ children }) => {
   };
 
   const removeDrinksPerEvent = (item) => {
-    const newDrinksPerEvent = drinksPerEvent.filter((newItem) => {
-      return newItem.name !== item.name && newItem.event !== item.event;
-    });
-    setDrinksPerEvent(newDrinksPerEvent);
+    let searchItem = drinksPerEvent.findIndex(
+      (search) => search.name === item.name && search.event === item.event
+    );
+    let new2 = [];
+    let newArray = drinksPerEvent.concat(new2);
+    newArray.splice(searchItem, 1);
+    setDrinksPerEvent(newArray);
   };
 
   return (

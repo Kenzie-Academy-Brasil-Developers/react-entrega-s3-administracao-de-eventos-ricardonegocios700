@@ -1,10 +1,43 @@
 import styled from "styled-components";
 
+export const ListEventsCSS = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  .row_two {
+    max-width: 49%;
+    div {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      span {
+        margin-right: 10px;
+      }
+    }
+  }
+  .row_one {
+    max-width: 49%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 50%;
+    img {
+      width: 15vh;
+      height: auto;
+    }
+    span {
+      margin: 7.5px;
+    }
+  }
+`;
+
 export const ListDrinksCSS = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: start;
 
   .drink {
     display: flex;
@@ -14,13 +47,17 @@ export const ListDrinksCSS = styled.div`
     width: 14vw;
     margin: 15px 10px;
     text-align: center;
-    span {
-      margin-top: 6px;
-    }
-
     img {
       max-width: 50px;
       max-height: auto;
+    }
+    span {
+      margin-top: 6px;
+      overflow: hidden; // Removendo barra de rolagem
+      text-overflow: ellipsis; // Adicionando "..." ao final
+      display: -webkit-box;
+      -webkit-line-clamp: 1; // Quantidade de linhas
+      -webkit-box-orient: vertical;
     }
     button {
       margin-top: 10px;
@@ -31,7 +68,7 @@ export const ListDrinksCSS = styled.div`
       cursor: pointer;
     }
   }
-  .drink-row_above {
+  /* .drink-row_above {
     flex-grow: 92;
     display: flex;
     flex-direction: column;
@@ -58,7 +95,7 @@ export const ListDrinksCSS = styled.div`
 
       margin-bottom: 0;
     }
-  }
+  } */
 `;
 
 export const HeaderCSS = styled.div`
@@ -67,4 +104,10 @@ export const HeaderCSS = styled.div`
   text-align: right;
   font-size: 18px;
   border-end-start-radius: 200px;
+  a {
+    padding: 1px 3px;
+  }
+  a:hover {
+    background-color: #aa99ba;
+  }
 `;
