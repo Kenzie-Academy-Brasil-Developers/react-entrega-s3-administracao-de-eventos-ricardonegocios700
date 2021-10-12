@@ -6,7 +6,7 @@ import { useHistory } from "react-router";
 
 export const ListEvents = () => {
   const history = useHistory();
-  const { newDrink, addNewDrink } = useContext(NewDrinkContext);
+  const { newDrink } = useContext(NewDrinkContext);
   const { listEvents } = useContext(ListEventsContext);
   const { addDrinksPerEvent } = useContext(DrinksPerEventContext);
   const handleClick = (event) => {

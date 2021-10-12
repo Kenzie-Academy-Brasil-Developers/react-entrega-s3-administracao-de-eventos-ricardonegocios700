@@ -25,18 +25,11 @@ export const ListDrinks = () => {
       <ListDrinksCSS>
         {drinks.map((item) => (
           <div key={item.id} className="drink">
-            <div id="drink-col_left">
-              <img src={item.image_url} alt={item.name} />
-              <button onClick={() => handleClick(item)}>Comprar</button>
-            </div>
-            <div id="drink-col_right">
-              <span>Produto: {item.name}</span>
-              <span>Produzida desde: {item.first_brewed}</span>
-              {/* <span>Descrição: {item.description}</span> */}
-              <span>
-                Volume: {item.volume.value} {item.volume.unit}
-              </span>
-            </div>
+            <img src={item.image_url} alt={item.name} />
+            <span>
+              <strong>{item.name}</strong>
+            </span>
+            <button onClick={() => handleClick(item)}>Comprar</button>
           </div>
         ))}
       </ListDrinksCSS>

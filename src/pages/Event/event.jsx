@@ -5,12 +5,14 @@ import { DrinksPerEventContext } from "../../providers/DrinksPerEvent/drinksPerE
 export const Event = () => {
   const params = useParams();
   const { drinksPerEvent } = useContext(DrinksPerEventContext);
-  console.log(drinksPerEvent);
+  const arrayWork = drinksPerEvent.filter((item) => {
+    return item.event === params.id;
+  });
   return (
     <>
       <h2>Evento com params</h2>
       <span>{params.id}</span>
-      {drinksPerEvent.map((item, index) => (
+      {arrayWork.map((item, index) => (
         <div key={index}>
           <span>{item.name}</span>
         </div>
